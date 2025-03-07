@@ -112,6 +112,75 @@ describe('Makes live API Verusd RPC calls', () => {
     expect(!!(await verusd.getVdxfId("test")).error).toBe(false);
   });
 
+  test("getvdxfid with only vdxfkey parameter", async () => {
+    const obj = await verusd.getVdxfId("vrsc.data.type.string", {
+      vdxfkey:"test"
+    });
+    expect(!!(obj.error)).toBe(false);
+    const result = {
+      "vdxfid": "i4g4wrokfYdJcNoU2oCSFovcsEK58tG7ch",
+      "indexid": "x9WBQfEqWrqyEYgVtUrbECT9ttL5zu6c3j",
+      "hash160result": "2590a2254668e71bc1f431ad97943be5eb01270d",
+      "qualifiedname": {
+        "namespace": "iJhCezBExJHvtyH3fGhNnt2NhU4Ztkf2yq",
+        "name": "vrsc.data.type.string"
+      },
+      "bounddata": {
+        "vdxfkey": "i8jHXEEYEQ7KEoYe6eKXBib8cUBZ6vjWSd"
+      }
+    };
+    
+    expect(obj.result).toStrictEqual(result);
+  });
+
+  test("getvdxfid with vdxfkey and uint256 parameters", async () => {
+    const obj = await verusd.getVdxfId("vrsc.data.type.string", {
+      vdxfkey: "test",
+      uint256: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+    });
+    expect(!!(obj.error)).toBe(false);
+    const result = {
+      "vdxfid": "iK8aVEDZ3tFqUxji4LNgkH49GZsRHVhKvp",
+      "indexid": "xPxgx2eduCUW78cjv22qifagJDtSAyPjUe",
+      "hash160result": "bd7f014f4be52aa20349f563d754ec7c313ebcab",
+      "qualifiedname": {
+        "namespace": "iJhCezBExJHvtyH3fGhNnt2NhU4Ztkf2yq",
+        "name": "vrsc.data.type.string"
+      },
+      "bounddata": {
+        "vdxfkey": "i8jHXEEYEQ7KEoYe6eKXBib8cUBZ6vjWSd",
+        "uint256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+      }
+    };
+    
+    expect(obj.result).toStrictEqual(result);
+  });
+
+  test("getvdxfid with vdxfkey, uint256 and indexnum parameters", async () => {
+    const obj = await verusd.getVdxfId("vrsc.data.type.string", {
+      vdxfkey: "test",
+      uint256:"9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      indexnum: "2",
+    });
+    expect(!!(obj.error)).toBe(false);
+    const result = {
+      "vdxfid": "iLm56VAJk8DHPy8i6fLJXDDJdMqHhNrCPX",
+      "indexid": "xRbBZHbPbSRx291jxLzTVbjqf1rJaKKnrC",
+      "hash160result": "c7ccc956d49ccad33574864494f9bd1059399bbd",
+      "qualifiedname": {
+        "namespace": "iJhCezBExJHvtyH3fGhNnt2NhU4Ztkf2yq",
+        "name": "vrsc.data.type.string"
+      },
+      "bounddata": {
+        "vdxfkey": "i8jHXEEYEQ7KEoYe6eKXBib8cUBZ6vjWSd",
+        "uint256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+        "indexnum": 2
+      }
+    };
+    
+    expect(obj.result).toStrictEqual(result);
+  });
+
   test("getcurrencyconverters", async () => {
     expect(!!(await verusd.getCurrencyConverters(["VRSCTEST"])).error).toBe(false);
   });
