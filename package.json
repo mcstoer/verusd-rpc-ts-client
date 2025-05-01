@@ -45,6 +45,6 @@
   ],
   "dependencies": {
     "axios": "1.7.4",
-    "verus-typescript-primitives": "git+https://github.com/michaeltout/verus-typescript-primitives.git#identity-update-request"
+    "verus-typescript-primitives": "git+https://github.com/mcstoer/verus-typescript-primitives.git#credentials-identity-update-request"
   }
 }

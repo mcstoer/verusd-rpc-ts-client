@@ -2915,9 +2915,9 @@ v8-to-istanbul@^9.0.1:
     "@types/istanbul-lib-coverage" "^2.0.1"
     convert-source-map "^1.6.0"
 
-"verus-typescript-primitives@git+https://github.com/michaeltout/verus-typescript-primitives.git#identity-update-request":
+"verus-typescript-primitives@git+https://github.com/mcstoer/verus-typescript-primitives.git#credentials-identity-update-request":
   version "1.0.0"
-  resolved "git+https://github.com/michaeltout/verus-typescript-primitives.git#ebeb46a6eb5eb3c0dd2361d0a5a03ca84478e004"
+  resolved "git+https://github.com/mcstoer/verus-typescript-primitives.git#5313b587b9bcc8035b10ab90d829a6323381443e"
   dependencies:
     base64url "3.0.1"
     bech32 "2.0.0"
