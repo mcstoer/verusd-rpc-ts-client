@@ -2917,7 +2917,7 @@ v8-to-istanbul@^9.0.1:
 
 "verus-typescript-primitives@git+https://github.com/mcstoer/verus-typescript-primitives.git#credential-class-iur":
   version "1.0.0"
-  resolved "git+https://github.com/mcstoer/verus-typescript-primitives.git#02909300fb884b6274d95a01f0b3473a32e9cb4d"
+  resolved "git+https://github.com/mcstoer/verus-typescript-primitives.git#493f952113a154c8d8d1669bb1950d570b46f12c"
   dependencies:
     base64url "3.0.1"
     bech32 "2.0.0"
